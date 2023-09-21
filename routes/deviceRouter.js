@@ -1,11 +1,12 @@
 import { Router } from "express";
 import { deviceController } from "../controllers/deviceController.js";
+import { checkRoleMiddleware } from "../middleware/checkRoleMiddleware.js";
 
 export const deviceRouter = new Router()
 
-deviceRouter.get('/', deviceController.getAll)          //           http://localhost:7000/api/device           get
-deviceRouter.get('/:id', deviceController.getOne)       //           http://localhost:7000/api/device/32        get/: id
-deviceRouter.post('/', deviceController.create)         //           http://localhost:7000/api/device           post  { body: form-data: name, price, rating, img, brandId, typeId} info
-deviceRouter.patch('/', deviceController.update)
-deviceRouter.delete('/:id', deviceController.delete)
+deviceRouter.get('/', deviceController.getAll)          
+deviceRouter.get('/:id', deviceController.getOne)       
+deviceRouter.post('/',checkRoleMiddleware('ADMIN'), deviceController.create)        
+deviceRouter.patch('/',checkRoleMiddleware('ADMIN'), deviceController.update)
+deviceRouter.delete('/:id',checkRoleMiddleware('ADMIN'), deviceController.delete)
 

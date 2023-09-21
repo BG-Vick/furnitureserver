@@ -18,7 +18,8 @@ class TypesController {
   }
 
   async create(req, res,next) {
-    const { name } = req.body;
+    let { name } = req.body;
+    name = name.toLowerCase();
     try {
       const type = await Type.create({ name });
       return res.json(type);
@@ -29,6 +30,7 @@ class TypesController {
 
   async update(req, res, next) {
     let { name, id } = req.body;
+    name = name.toLowerCase();
     try {
       const type = await Type.update({ name: name }, { where: { id } });
       return res.json(type);

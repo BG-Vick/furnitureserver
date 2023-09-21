@@ -8,12 +8,12 @@ const __dirname = path.resolve();
 class InfoController{
 
 async create(req, res, next){
-
+    
     let { id, info } = req.body
     try{
         const deviceInfo = await DeviceInfo.create({
-                title: info.title,
-                description: info.description,
+                title: info.title.toLowerCase(),
+                description: info.description.toLowerCase(),
                 deviceId: id
             })
         return res.json(deviceInfo)

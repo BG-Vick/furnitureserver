@@ -23,7 +23,7 @@ class BasketDeviceController{
     async create(req, res, next){
         try{
             const { basketId, deviceId } = req.body
-            console.log(req.body)
+
             const basketDevice = await BasketDevice.create({basketId, deviceId})  // не работает deviceId
             return res.json(basketDevice) 
         } catch(e){

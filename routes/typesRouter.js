@@ -8,7 +8,7 @@ export const typesRouter = new Router()
 
 typesRouter.get('/',typesController.getAll)
 typesRouter.post('/',checkRoleMiddleware('ADMIN'), typesController.create)
-typesRouter.patch('/', typesController.update)
-typesRouter.delete('/:id', typesController.delete)
+typesRouter.patch('/', checkRoleMiddleware('ADMIN'), typesController.update)
+typesRouter.delete('/:id', checkRoleMiddleware('ADMIN'), typesController.delete)
 
 

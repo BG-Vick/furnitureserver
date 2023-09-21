@@ -14,7 +14,8 @@ class BrandController{
 
 
     async create(req, res, next){
-        const {name} = req.body
+        let {name} = req.body
+        name = name.toLowerCase();
         try{
         const brand = await Brand.create({name})
         return res.json(brand) 
@@ -26,6 +27,7 @@ class BrandController{
 
     async update(req, res, next){
         let {name, id} = req.body
+        name = name.toLowerCase();
         try{
             const brand = await Brand.update({ name: name }, {where:{ id } })
             return res.json(brand) 

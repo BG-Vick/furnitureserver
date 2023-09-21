@@ -54,7 +54,20 @@ class UserController{
     async check(req, res, next){
         const token = generateJwt(req.user.id, req.user.email, req.user.role)
         res.json({token})
-    }   
+    }  
+    ///////////////////////////////////////////////////////////////////////////////
+
+/*     async delete(req, res, next){
+        const { id } = req.params
+        console.log(id)
+        const user = await User.destroy({where: {id}})
+       if(user){
+            const allUsers = await User.findAndCountAll()
+            return res.json(allUsers)
+        }
+        
+        return res.json(user)
+    } */    
 }
 
 export const userController = new UserController() 
