@@ -24,9 +24,6 @@
     "sequelize": "^6.32.1",
     "uuid": "^9.0.0"
   },
-  "engines": {
-    "node": "19.7.0"
-  },
   "devDependencies": {
     "nodemon": "^3.0.1"
   },
