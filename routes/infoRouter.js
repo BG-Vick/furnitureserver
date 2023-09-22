@@ -1,5 +1,5 @@
-import { Router } from "express";
-import { infoController } from "../controllers/infocontroller.js";
+/* import { Router } from "express";
+import { infoController } from "../controllers/infoController.js";
 import { checkRoleMiddleware } from "../middleware/checkRoleMiddleware.js";
 
 
@@ -10,3 +10,4 @@ infoRouter.post('/',checkRoleMiddleware('ADMIN'), infoController.create)
 infoRouter.delete('/:id',checkRoleMiddleware('ADMIN'), infoController.delete)
 
 
+ */

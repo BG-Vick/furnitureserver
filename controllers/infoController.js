@@ -1,4 +1,4 @@
-import { Device, DeviceInfo } from "../models/models.js"
+/* import { DeviceInfo } from "../models/models.js"
 import { ApiError }  from "../error/ApiError.js"
 import path from "path";
 const __dirname = path.resolve();
@@ -37,3 +37,4 @@ async create(req, res, next){
 }
 
 export const infoController = new InfoController() 
+ */
