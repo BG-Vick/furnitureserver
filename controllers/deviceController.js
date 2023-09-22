@@ -4,8 +4,6 @@ import { ApiError } from "../error/ApiError.js";
 import path from "path";
 const __dirname = path.resolve();
 import fs from "fs";
-import { sequelize } from "../db.js";
-import { response } from "express";
 import { Op } from "sequelize";
 
 class DeviceController {
