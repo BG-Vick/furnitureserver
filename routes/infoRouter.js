@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { infoController } from "../controllers/InfoController.js";
+import { infoController } from "../controllers/infocontroller.js";
 import { checkRoleMiddleware } from "../middleware/checkRoleMiddleware.js";
 
 

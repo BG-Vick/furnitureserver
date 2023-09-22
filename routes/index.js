@@ -3,7 +3,6 @@ import { brandRouter } from "./brandRouter.js";
 import { userRouter } from "./userRouter.js";
 import { typesRouter } from "./typesRouter.js";
 import { deviceRouter } from "./deviceRouter.js";
-import { errorHandleMiddleware } from "../middleware/ErrorHandleMiddleware.js";
 import { basketRouter } from "./basketRouter.js";
 import { basketDeviceRouter } from "./basketDeviceRouter.js";
 import { infoRouter } from "./infoRouter.js";
