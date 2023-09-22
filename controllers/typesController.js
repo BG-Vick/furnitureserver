@@ -1,10 +1,6 @@
 import { Type } from "../models/models.js";
 import { ApiError }  from "../error/ApiError.js"
 
-
-
-
-
 class TypesController {
 
     

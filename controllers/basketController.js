@@ -12,28 +12,8 @@ class BasketController{
     
      async getOne(req, res,next){
 
-        
-        //const {id} = req.params
+        /** ip developing process */
 
-
-
-
-
-        try {
-
-            await sequelize.drop()
-console.log('Все таблицы были удалены.')
-
-
-
-
-        //const basket = await Basket.findOne({
-        //    where:{id},
-        //})
-        //return res.json(basket)
-    } catch (e) {
-        next(ApiError.badRequest(e.message));
-      }
     } 
 }
 
